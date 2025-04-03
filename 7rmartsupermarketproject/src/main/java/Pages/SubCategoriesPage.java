@@ -8,8 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 public class SubCategoriesPage {
 	public WebDriver driver;
 
-	@FindBy(xpath = " ")
+	@FindBy(xpath = "//h1[@class='m-0 text-dark']")
 	private WebElement pageTitle;
+	
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/delete?del=3296&page_ad=1']")
 	private WebElement deleteButton;
 

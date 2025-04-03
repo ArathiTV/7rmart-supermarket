@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ManageNewsPage {
 	public WebDriver driver;
 
-	@FindBy(xpath = "//h1[text()='Manage News']")
+	@FindBy(xpath = "//h1[@class='m-0 text-dark']")
 	private WebElement pageTitle;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
 	private WebElement newButton;
