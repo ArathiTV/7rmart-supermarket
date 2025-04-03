@@ -44,7 +44,7 @@ public class AdminUserTest extends Base {
 		loginpage.login();
 		homepage.navigateToAdminUser();
 		adminuserpage.searchAdminUsers(userName,userType);
-		String expectedUser = "Aparna";
+		String expectedUser = userName;
 		String actualUser = adminuserpage.showSearchAdminUser();
 		Assert.assertEquals(actualUser, expectedUser);
 		
