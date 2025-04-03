@@ -7,33 +7,28 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SubCategoriesPage {
 	public WebDriver driver;
-	
-	@FindBy(xpath = "//h1[text()='Manage News']")
+
+	@FindBy(xpath = " ")
 	private WebElement pageTitle;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/delete?del=3296&page_ad=1']")
 	private WebElement deleteButton;
-	@FindBy(xpath = "//")
-	private WebElement okButton;
-	@FindBy(xpath = "")
-	private WebElement cancelButton;
-	
-	private WebElement updateButton;
-	@FindBy(xpath = "//")
-	private WebElement okButton;
-	@FindBy(xpath = "")
-	private WebElement cancelButton;
-	
-	
-	
-	
+
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	private WebElement weAlertMessage;
+
 	public SubCategoriesPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public String getPageTitle() {
 		return pageTitle.getText();
 	}
-	
+
+	public String deleteCategory() {
+		deleteButton.click();
+		driver.switchTo().alert().accept();
+		return weAlertMessage.getText();
+	}
 
 }
