@@ -11,7 +11,7 @@ public class SubCategoriesPage {
 	@FindBy(xpath = "//h1[@class='m-0 text-dark']")
 	private WebElement pageTitle;
 	
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/delete?del=3296&page_ad=1']")
+	@FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']//tbody//tr[1]//td[5]//i[@class = 'fas fa-trash-alt']")
 	private WebElement deleteButton;
 
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
