@@ -1,0 +1,26 @@
+<suite name="sanity1" tread-count="3" paralall="testes">
+	<listeners>
+		<listener class-name="listeners.ExtentReporter">`
+		</listener>
+	</listeners>
+	<test name="execution">
+		<classes>
+
+			<class name="testscripts.AdminUserTest">
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="execution1">
+
+		<classes>
+
+			<class name="testscripts.AdminUserTest">
+			</class>
+
+
+		</classes>
+	</test>
+
+</suite>
