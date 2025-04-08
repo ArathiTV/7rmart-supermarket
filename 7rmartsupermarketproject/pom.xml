@@ -20,6 +20,7 @@
 						<suiteXmlFiles>
 							<file>src/main/resources/xmlfiles/groups.xml</file>
 							<file>src/main/resources/xmlfiles/parallel.xml</file>
+							<file>src/main/resources/xmlfiles/crossbrowser.xml</file>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

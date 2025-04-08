@@ -3,13 +3,11 @@ package testscripts;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import Pages.AdminUserPage;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.ManageNewsPage;
 import automationCore.Base;
-import utilities.GeneralUtility;
+
 
 public class ManageNewsTest extends Base {
 	LoginPage loginpage;
@@ -28,12 +26,11 @@ public class ManageNewsTest extends Base {
 	public void verifyWhetherUserIsAbleToViewManageNewsPage() {
 		setupPage(driver);
 		String expectedPageTitle = "Manage News";
-		String actualPageTitle = managenewspage.getPageTitle(); 
+		String actualPageTitle = managenewspage.getPageTitle();
 		Assert.assertEquals(actualPageTitle, expectedPageTitle);
-		
-		
+
 	}
-	
+
 	@Test
 	public void verifyWhetherUserIsAbleToCreateNewNews() {
 		setupPage(driver);
@@ -43,8 +40,9 @@ public class ManageNewsTest extends Base {
 		String expectedResult = "News Created Successfully";
 		String actualResult = managenewspage.getAlert();
 		Assert.assertTrue(actualResult.contains(expectedResult));
-		
+
 	}
+
 	@Test
 	public void verifyWhetherUserIsAbleToSearchNews() {
 		setupPage(driver);
@@ -53,7 +51,7 @@ public class ManageNewsTest extends Base {
 		String actualNews = managenewspage.showSearchNews();
 		Assert.assertEquals(actualNews, expectedNews);
 	}
-	
+
 	@Test
 	public void verifyWhetherUserIsAbleToReset() {
 		setupPage(driver);
@@ -61,15 +59,7 @@ public class ManageNewsTest extends Base {
 		String expectedNews = "Manage News";
 		String actualNews = managenewspage.getPageTitle();
 		Assert.assertEquals(actualNews, expectedNews);
-	
+
+	}
+
 }
-
-		
-	
-	
-	
-	
-	
-
-		
-}	

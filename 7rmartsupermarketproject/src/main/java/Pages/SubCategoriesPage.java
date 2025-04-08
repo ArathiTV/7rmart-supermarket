@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class SubCategoriesPage {
 	public WebDriver driver;
+	PageUtility pageutility;
 
 	@FindBy(xpath = "//h1[@class='m-0 text-dark']")
 	private WebElement pageTitle;
@@ -26,10 +29,20 @@ public class SubCategoriesPage {
 		return pageTitle.getText();
 	}
 
-	public String deleteCategory() {
+	public void deleteCategory() {
+		pageutility = new PageUtility(driver);
+		pageutility.acceptAlert();
+		
+	}
+	public void clickDeleteButton() {
 		deleteButton.click();
-		driver.switchTo().alert().accept();
+	}
+	public String getText() {
 		return weAlertMessage.getText();
+	}
+	public void deleteItem() {
+		clickDeleteButton();
+		deleteCategory();
 	}
 
 }

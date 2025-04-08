@@ -3,7 +3,6 @@ package utilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class PageUtility {
@@ -32,12 +31,17 @@ public class PageUtility {
 
 	public void select_ByVisibleText(WebElement element, String text) {
 		Select select = new Select(element);
-		select.selectByVisibleText(text);
+		select.selectByVisibleText(text); 
 
 	}
 
 	public void select_ByValue(WebElement element, int index) {
-		Select select = new Select(element);
+		Select select = new Select(element);     
 		select.selectByIndex(index);
 	}
+	
+	public void  acceptAlert() {
+		driver.switchTo().alert().accept();
+		
+	} 
 }
