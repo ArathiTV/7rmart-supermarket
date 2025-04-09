@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class AdminUserPage {
 PageUtility pageutility;
@@ -110,7 +111,7 @@ PageUtility pageutility;
 	public void selectDropDown(String userType) {
 		pageutility = new PageUtility(driver);
 		pageutility.select_ByVisibleText(weUserType, userType);
-		pageutility.select_ByVisibleText(newButton, userType);
+		//pageutility.select_ByVisibleText(newButton, userType);
 		
 	}
 
